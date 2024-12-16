@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=SUSE:wght@100..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{
+    background-color: #2b315f;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stopWatch-container{
+    background-image: radial-gradient(rgba(255, 255, 255, 0.005),rgba(255, 255, 255, 0.02),rgba(255, 255, 255, 0.1));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px 0px;
+    border-radius: 10px;
+}
+.stopWatch{
+    display: flex;
+    align-items: start;
+    justify-content:start;
+}
+.stopWatch .digit{
+    font-size: 55px;
+    letter-spacing: 4px;
+}
+.stopWatch .div{
+    font-size: 50px;
+    transform: translateY(-3px);
+}
+#mSecond{
+    color: #fe9800;
+}
+.hours,.minutes,.seconds,.millisec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.buttons{
+    display: flex;
+}
+.buttons button{
+    margin: 50px;
+    margin-left: 25px;
+    padding: 8px;
+    border: none;
+    border-radius:7px;
+    padding-left: 18px;
+    padding-right: 15px;
+    background-color: #fe9800;
+    color: white;
+    letter-spacing: 0.7px;
+    font-weight: 550;
+}
+.buttons .start{
+    margin-left: 50px;
+}
+.buttons button:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+}
+.watermark{
+    position: fixed;
+    bottom: 20px;
+    opacity: 0.1;
+}
+.watermark a{
+    color: white;
+    text-decoration: none;
+}
+.watermark:hover{
+    opacity: 0.6;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.heading{
+    position: fixed;
+    top: 15%;
+    font-size: 40px;
+    font-family: "Nunito";
+    letter-spacing: 1px;
+}
+#dAT{
+    color: white;
+    position: fixed;
+    top: 20px;
+    right: 20px; 
+    font-size: 15px; 
+}
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    font-size: 11px;
+    padding: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+}
+.info-section{
+    background-color:rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.information{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #2b315f;
+}
+.information li{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 5px;
+}
+.information p{
+    font-size: 15px;
+    margin: 5px;
+}
+.information i{
+    align-self: end;
+}
+@media(max-width:800px) {
+    .container .heading{
+        top: 12%;
+        font-size: 35px;
+    }
+}
+@media(max-width:500px) {
+    .container .heading{
+        top: 15%;
+        font-size: 30px;
+    }
+    .info{
+        top: 20px;
+        left: 20px;
+    }
+    .information{
+        width: 60%;
+        padding: 10px;
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+    .information li{
+        font-size: 13px;
+        margin: 3px;
+    }
+    .information p{
+        font-size: 12px;
+        margin: 2px;
+    }
+    .stopWatch-container{
+        padding: 30px 15px 0px;
+    }
+    .head{
+        font-size: 10px;
+    }
+    .stopWatch .digit{
+        font-size: 41px;
+    }
+    .stopWatch .div{
+        font-size: 38px;
+    }
+    .buttons button{
+        margin: 20px;
+        margin-left: 20px;
+        padding: 6px;
+        font-size: 13px;
+        padding-left: 18px;
+        padding-right: 15px;
+    }
+    .buttons .start{
+        margin-left: 20px;
+    }
+    #dAT{
+        font-size: 13px;
+    }
+}
+@media(max-width:400px) {
+    .container .heading{
+        top: 23%;
+        font-size: 30px;
+    }
+    .information{
+        width: 70%;
+    }
+    .information li{
+        font-size: 12px;
+    }
+    .information p{
+        font-size: 11px;
+    }
+    .information h2{
+        font-size: 17px;
+        margin-bottom: 5px;
+    }
+    .stopWatch-container{
+        padding: 23px 8px 0px;
+    }
+    .head{
+        font-size: 10px;
+    }
+    .stopWatch .digit{
+        font-size: 32px;
+    }
+    .stopWatch .div{
+        font-size: 28px;
+        transform: translateY(-1px);
+    }
+    .buttons button{
+        margin: 15px;
+        margin-left: 15px;
+        padding: 6px;
+        font-size: 11px;
+        padding-left: 16px;
+        padding-right: 14px;
+    }
+    .buttons .start{
+        margin-left: 15px;
+    }
+    #dAT{
+        font-size: 12px;
+    }
+}

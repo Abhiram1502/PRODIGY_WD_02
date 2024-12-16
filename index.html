@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/stopwatch.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="info" onclick="showInfo()"><i class="fa-solid fa-info"></i></div>
+        <section class="info-section" id="info">
+            <div class="information">
+                <i onclick="hideInfo()" class="fa-regular fa-circle-xmark"></i>
+                <h2>How to use</h2>
+                <ul>
+                    <li>Start the Stopwatch:</li>
+                    <p>Click the Start button to begin the timer. The stopwatch will start counting from 00:00:00:00.<br>
+                        The seconds and milliseconds will update every 10ms.
+                    </p>
+                    <li>Stop the Stopwatch:</li>
+                    <p>
+                        Click the Stop button to pause the stopwatch. The time will freeze, and the stopwatch will stop counting.<br>If you wish to resume, click the Start button again.
+                    </p>
+                    <li>Reset the Stopwatch:</li>
+                    <p>Click the Reset button to clear the stopwatch and set the time back to 00:00:00:00.<br>
+                        This will reset the timer to its initial state.
+                    </p>
+                </ul>
+            </div>
+        </section>
+        <div class="date-and-time" id="dAT"></div>
+        <h3 class="heading">Stop Watch</h3>
+        <div class="stopWatch-container">
+            <div class="stopWatch">
+                <div class="hours">
+                    <div class="digit" id="hour">00</div>
+                    <div class="head">Hours</div>
+                </div>
+                <span class="div">:</span>
+                <div class="minutes">
+                    <div class="digit" id="minute">00</div>
+                    <div class="head">Minutes</div>
+                </div>
+                <span class="div">:</span>
+                <div class="seconds">
+                    <div class="digit" id="second">00</div>
+                    <div class="head">Seconds</div>
+                </div>
+                <span class="div">:</span>
+                <div class="millisec">
+                    <div class="digit" id="mSecond">00</div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="start" id="start">Start</button>
+                <button class="stop" id="stop">Stop</button>
+                <button class="reset" id="reset">Reset</button>
+            </div>
+        </div>
+        <div class="watermark">
+            <p><a target="_blank" href="https://github.com/Abhiram1502">-By Abhiram Pinnaka</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
